@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+require ::File.expand_path('../config/environment',  __FILE__)
+run Rails.application
+
 require 'rack/lobster'
 
 map '/health' do
@@ -293,3 +298,9 @@ WELCOME_CONTENTS
   end
   run welcome
 end
+=======
+# This file is used by Rack-based servers to start the application.
+
+require ::File.expand_path('../config/environment',  __FILE__)
+run Expertiza::Application
+>>>>>>> 2b0d82468950b1cbd827e0b97dd55b0c76bf29e7

@@ -1,0 +1,39 @@
+Usage: rhc cartridge <action>
+
+Cartridges add functionality to OpenShift applications.  Each
+application has one web cartridge to listen for HTTP requests, and any
+number of addon cartridges.  Addons may include databases like MySQL and
+Mongo, administrative tools like phpMyAdmin, or build clients like
+Jenkins.
+
+Most cartridges that listen for incoming network traffic are placed on
+one or more gears (a small server instance).  Other cartridges may be
+available across all of the gears of an application to listen for
+changes (like Jenkins) or provide environment variables.
+
+Use the 'cartridges' command to see a list of all available cartridges.
+Add a new cartridge to your application with 'add-cartridge'. OpenShift
+also supports downloading cartridges - pass a URL in place of the
+cartridge name and we'll download and install that cartridge into your
+app.  Keep in mind that these cartridges receive no security updates.
+Note that not all OpenShift servers allow downloaded cartridges.
+
+For scalable applications, use the 'cartridge-scale' command on the web
+cartridge to set the minimum and maximum scale.
+
+Commands that affect a cartridge within an application will affect all
+gears the cartridge is installed to.
+
+List of Actions
+  add           Add a cartridge to your application
+  list          List available cartridges
+  reload        Reload the cartridge's configuration
+  remove        Remove a cartridge from your application
+  restart       Restart a cartridge
+  scale         Set the scale range for a cartridge
+  show          Show useful information about a cartridge
+  start         Start a cartridge
+  status        Get current the status of a cartridge
+  stop          Stop a cartridge
+  storage       View/manipulate storage on a cartridge
+
